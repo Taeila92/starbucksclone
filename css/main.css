@@ -374,6 +374,6 @@ header .badges .badge {
 }
 
 .notice .notice-line .inner__right {
-  width: 40%;
-  height: 100%;
+  /* width: 40%;
+  height: 100%; */
 }
