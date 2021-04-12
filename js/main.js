@@ -15,7 +15,6 @@ searchInputEl.addEventListener('blur', function(){
   searchInputEl.setAttribute('placeholder', '');
 });
 
-
 const badgeEl = document.querySelector('header .badges');
 
 window.addEventListener('scroll', _.throttle(function(){ // _.throttle : lodash.js
@@ -47,6 +46,7 @@ fadeEls.forEach(function(fadeEl, index) {
     opacity: 1
   });
 });
+
 
 // new Swiper(선택자, 옵션)
 new Swiper('.notice-line .swiper-container', {
@@ -88,6 +88,8 @@ promotionToggleBtn.addEventListener('click', function(){
     promotionEl.classList.remove('hide');
   }
 });
+
+
 // 범위 랜덤 함수(소수점 2자리까지)
 function random(min, max) {
   // `.toFixed()`를 통해 반환된 문자 데이터를,

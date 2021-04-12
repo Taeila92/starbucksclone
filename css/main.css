@@ -125,7 +125,7 @@ header .sub-menu ul.menu li::before {
   width: 1px;
   height: 12px;
   background-color: #e5e5e5;
-  position: absolute; /*display가 자동으로 block으로 지정됨*/
+  position: absolute;  /* display가 자동으로 block으로 지정됨 */
   top: 0;
   bottom: 0;
   margin:auto;
@@ -140,6 +140,7 @@ header .sub-menu ul.menu li a{
   padding: 11px 16px;
   display: block;
   color: #656565;
+  transition: 1s;
 }
 
 header .sub-menu ul.menu li a:hover{
@@ -193,13 +194,13 @@ header .main-menu {
 }
 
 header .main-menu .item{
-
 }
 
 header .main-menu .item .item__name {
   padding: 10px 20px 34px 20px;
   font-family: Arial, sans-serif;
   font-size: 13px;
+  transition: .2s;
 }
 header .main-menu .item:hover .item__name {
   background-color: #2d2a29;
@@ -212,8 +213,10 @@ header .main-menu .item .item__contents{
   position: fixed;
   left: 0;
   display: none;
+  opacity: 0;
 }
 header .main-menu .item:hover .item__contents{
+  opacity: 1;
   display: block;
 }
 
@@ -241,10 +244,10 @@ header .main-menu .item .item__contents .contents__menu > ul > li  ul li {
   font-size: 12px;
   color: #999;
   cursor: pointer; 
+  transition: .6s;
 }
 
 header .main-menu .item .item__contents .contents__menu > ul > li  ul li:hover {
-  text-decoration: underline;
   color: #669900;
 }
 
@@ -640,8 +643,127 @@ position: relative;
   top: 350px;
   left: 150px;
 }
-.youtube .floating3{
+
+
+/* SEASON PRODUCT */
+.season-product{
+  background-image: url('../images/season_product_bg.jpg');
+}
+.season-product .inner {
+  height: 400px; 
+}
+.season-product .floating3{
   position: absolute;
-  bottom: -200px;
+  top: -200px;
   right: 0;
+}
+.season-product .text-group{
+  position: absolute;
+  top: 110px;
+  right: 100px;
+}
+.season-product .text-group .title{
+  margin-bottom: 10px;
+}
+.season-product .text-group .description{
+  margin-bottom: 15px;
+}
+.season-product .text-group .more{
+
+}
+
+/* RESERVE-COFFEE */
+.reserve-coffee {
+  background-image: url('../images/reserve_bg.jpg');
+}
+.reserve-coffee .inner{
+  height: 400px;
+}
+.reserve-coffee .reserve-logo{
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+.reserve-coffee .text-group{
+  position: absolute;
+  top: 124px;
+  left: 208px;
+}
+.reserve-coffee .product{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* PICK YOUR FAVORITE */
+.pick-your-favorite{
+background-image: url('../images/favorite_bg.jpg');
+background-repeat: no-repeat;
+background-position: center;
+background-attachment: fixed;
+background-size: cover;
+}
+.pick-your-favorite .inner{
+  padding: 110px 0;
+}
+.pick-your-favorite .text-group{
+  margin-left: 100px;
+  width: 362px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-end;
+}
+.pick-your-favorite .text-group .title{
+  margin-bottom: 40px;
+}
+.pick-your-favorite .text-group .description{
+  margin-bottom: 40px;
+}
+
+/* RESERVE STORE */
+.reserve-store{
+  background-image: url('../images/reserve_store_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.reserve-store .inner{
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reserve-store .medal{
+  perspective: 600px;
+  width: 334px;
+  height: 334px;
+}
+.reserve-store .medal .front,
+.reserve-store .medal .back {
+  width: 334px;
+  height: 334px;  
+  transition: 1s;
+  position: absolute;
+  backface-visibility: hidden;
+
+}
+.reserve-store .medal .front{
+  transform: rotateY(0deg);
+}
+.reserve-store .medal:hover .front{
+  transform: rotateY(180deg);
+}
+.reserve-store .medal .back{
+  transform: rotateY(-180deg);
+}
+.reserve-store .medal:hover .back{
+  transform: rotateY(0deg);
+}
+.reserve-store .medal .back .btn{
+  position: absolute;
+  top: 240px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
